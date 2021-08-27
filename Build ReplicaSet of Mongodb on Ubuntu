@@ -1,0 +1,35 @@
+Build ReplicaSet of Mongodb on Ubuntu
+
+# Verify if mongo is conecting
+
+$ mongo
+
+# If disconnected
+
+$ sudo service mongod start
+
+# Creating ReplicaSet
+
+mongod -port 27018 --dbpath ~/etc/etc/etc/ --replSet "rs0"
+
+# Open the Mongo GOOGLE_CLIENT_SECRET
+
+$ mongo
+
+#If ou created more than one ReplicaSet
+
+$  rs.initiate(
+      {
+         _id: "rs0",
+         version: 1,
+         members: [
+            { _id: 0, host : "localhost:27018" }
+            {...}
+         ]
+      }
+   )
+
+#If created one ReplicaSet
+
+$ initiate()
+
